@@ -7,16 +7,26 @@
   'ctrl-x b': 'fuzzy-finder:toggle-buffer-finder'
   # find resource (Eclipse like)
   'ctrl-shift-t': 'fuzzy-finder:toggle-file-finder'
-  'ctrl-x ctrl-f': 'application:open-file'
-  'ctrl-x ctrl-n': 'application:new-file'
-  'ctrl-x ctrl-d': 'application:open-folder'
+  'ctrl-x': 'unset!'
+  'ctrl-x ctrl-f': 'fuzzy-finder:toggle-file'
+
+  # If you want the "find a file" command to open your native file browser
+  # 'ctrl-x ctrl-f': 'application:open-file'
+
+  # If you want to use the "advanced open file" package (this emulates emacs)
+  # 'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+
   'ctrl-g': 'core:cancel'
-  'ctrl-x k': 'core:close'
+  'ctrl-x ctrl-c': 'application:quit'
+  'ctrl-x k': 'pane:close'
   'ctrl-x 3': 'pane:split-right'
   'ctrl-x 2': 'pane:split-down'
-  'ctrl-x 0': 'pane:close'
   'ctrl-x 1': 'pane:close-other-items'
   'ctrl-x o': 'window:focus-next-pane'
+  'ctrl-f': 'core:move-right'
+  'ctrl-b': 'core:move-left'
+  'ctrl-n': 'core:move-down'
+  'ctrl-p': 'core:move-up'
 
 'atom-text-editor:not([mini])':
   # navigation
@@ -30,10 +40,7 @@
   'escape >': 'core:move-to-bottom'
   'alt-<': 'core:move-to-top'
   'alt->': 'core:move-to-bottom'
-  'ctrl-f': 'core:move-right'
-  'ctrl-b': 'core:move-left'
-  'ctrl-n': 'core:move-down'
-  'ctrl-p': 'core:move-up'
+
   'alt-f': 'editor:move-to-end-of-word'
   'alt-b': 'editor:move-to-beginning-of-word'
   'ctrl-v': 'core:page-down'
@@ -44,7 +51,11 @@
   'ctrl-d': 'core:delete'
   'ctrl-k': 'editor:cut-to-end-of-line'
   'ctrl-x u': 'core:undo'
-  'ctrl-/': 'editor:toggle-line-comments'
+  'ctrl-/': 'core:undo'
+  'ctrl-_': 'core:undo'
+  'ctrl-x 0': 'pane:close'
+  'ctrl-c ctrl-c': 'editor:toggle-line-comments'
+
   # copy/paste
   'ctrl-y': 'core:paste'
   'ctrl-w': 'core:cut'
@@ -57,7 +68,10 @@
   # file
   'ctrl-x ctrl-s': 'core:save'
   'ctrl-x ctrl-w': 'core:save-as'
-  'ctrl-x ctrl-f': 'application:open-file'
+  'ctrl-x ctrl-f': 'advanced-open-file:toggle'
+  # 'ctrl-x ctrl-f': 'application:open-file'
+
+
   'ctrl-shift-t': 'fuzzy-finder:toggle-file-finder'
   # tab/buffers
   'ctrl-x b': 'fuzzy-finder:toggle-buffer-finder'
@@ -66,9 +80,8 @@
   'alt-x': 'command-palette:toggle'
   'ctrl-shift-c': 'command-palette:toggle'
   # application
-  'ctrl-g': 'core:cancel'
-  'ctrl-x k': 'pane:close'
-  'ctrl-x ctrl-c': 'application:quit'
+  # 'ctrl-x k': 'pane:close'
+
   # other
    # ctrl-t           find any file in the project
    # ctrl-,           open settings view
